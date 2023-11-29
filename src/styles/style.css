@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100;1,400;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  font-size: 32px;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .main {
+  background-color: hsl(0, 0%, 100%);
+  width: 45%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 32px;
+  border-radius: 30px;
+  border-end-end-radius: 150px;
+}
+body .main .container-data {
+  display: flex;
+  gap: 16px;
+}
+body .main .container-data .container-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+body .main .container-data .container-inputs label {
+  font-size: 12.8px;
+  color: hsl(0, 1%, 44%);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+body .main .container-data .container-inputs label.erro {
+  color: hsl(0, 100%, 67%);
+}
+body .main .container-data .container-inputs input {
+  width: 130px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid hsl(0, 0%, 86%);
+  font-weight: 700;
+}
+body .main .container-data .container-inputs input:hover {
+  cursor: pointer;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+body .main .container-data .container-inputs input.erro {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+body .main .container-data .container-inputs span {
+  color: hsl(0, 100%, 67%);
+  font-family: sans-serif;
+  font-style: italic;
+}
+body .main .container-division {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .main .container-division .line {
+  width: 100%;
+  background-color: black;
+  display: inline-block;
+  height: 3px;
+}
+body .main .container-division button {
+  border: none;
+  background: none;
+}
+body .main .container-division button svg {
+  background-color: hsl(259, 100%, 65%);
+  width: 90px;
+  height: 80px;
+  border-radius: 100%;
+  padding: 10px;
+}
+body .main .container-division button svg:hover {
+  background-color: black;
+  cursor: pointer;
+}
+body .main .container-division button svg:active {
+  background-color: hsl(259, 100%, 65%);
+}
+body .main .line.two {
+  display: none;
+}
+body .main h2 {
+  font-size: 4em;
+  font-weight: 800;
+}
+body .main h2 span {
+  color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 1080px) {
+  body .main {
+    width: 90%;
+  }
+  body .main .container-data .container-inputs label {
+    font-size: 0.7em;
+  }
+  body .main .container-data .container-inputs input {
+    width: 80px;
+    font-size: 1em;
+  }
+  body .main .container-division button svg {
+    width: 70px;
+    height: 60px;
+  }
+  body .main .line.two {
+    display: block;
+  }
+  body .main h2 {
+    font-size: 3em;
+  }
+}/*# sourceMappingURL=style.css.map */

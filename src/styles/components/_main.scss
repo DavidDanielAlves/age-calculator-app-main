@@ -1,0 +1,158 @@
+@import '../abstract/variaveis';
+
+body {
+    height: 100vh;
+    font-family: $font-family;
+    background-color: $off-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .main {
+        background-color: $white;
+        width: 45%;
+        height: fit-content;
+        padding: 32px;
+        border-radius: 30px;
+        border-end-end-radius: 150px;
+
+        .container-data {
+            display: flex;
+            gap: 16px;
+
+            .container-inputs {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 16px;
+                gap: 8px;
+
+                label {
+                    font-size: $font-size-inputs / 2.5;
+                    color: $smokey-grey;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+
+                label.erro {
+                    color: $ligth-red;
+                }
+
+                input {
+                    width: 130px;
+                    padding: 8px;
+                    border-radius: 8px;
+                    border: 1px solid $ligth-grey;
+                    font-weight: 700;
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid $purple;
+                    }
+                }
+
+                input.erro {
+                    border: 1px solid $ligth-red;
+                }
+
+                span {
+                    color: $ligth-red;
+                    font-family: sans-serif;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .container-division {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .line {
+                width: 100%;
+                background-color: black;
+                display: inline-block;
+                height: 3px;
+            }
+
+            button {
+                border: none;
+                background: none;
+
+                svg {
+                    background-color: $purple;
+                    width: 90px;
+                    height: 80px;
+                    border-radius: 100%;
+                    padding: 10px;
+
+                    &:hover {
+                        background-color: black;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        background-color: $purple;
+                    }
+                }
+
+            }
+
+        }
+
+        .line.two {
+            display: none;
+        }
+
+        h2 {
+            font-size: 4em;
+            font-weight: 800;
+
+            span {
+                color: $purple;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        .main {
+            width: 90%;
+
+            .container-data {
+                .container-inputs {
+
+                    label {
+                        font-size: 0.7em;
+                    }
+
+                    input {
+                        width: 80px;
+                        font-size: 1em;
+                    }
+                }
+
+            }
+
+            .container-division {
+                button {
+                    svg {
+                        width: 70px;
+                        height: 60px;
+                    }
+                }
+
+            }
+
+            .line.two {
+                display: block;
+            }
+
+            h2 {
+                font-size: 3em;
+            }
+
+        }
+    }
+}
